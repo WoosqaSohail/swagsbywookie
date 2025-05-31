@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Woosqa's Art Shop</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff9f5;
+      color: #333;
+    }
+    header {
+      background: #ffb6c1;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      animation: fadeIn 2s ease;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .banner{
+      background: #ffb6c1;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      animation: fadeIn 2s ease;
+    }
+    .art-card {
+      margin: 15px;
+      padding: 10px;
+      border: 2px solid #ffd700;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .art-card:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>🎨 Woosqa's Art Gallery</header>
+
+<section id="banner">
+<img src="gun girl.jpg"class='img-fluid' width="1600" height="500">
+</section>
+
+
+<section class="gallery">
+  <div class="art-card">
+    <img src="uploads/art1.jpg" alt="Art 1" width="100%">
+    <h3>Sunset Bliss</h3>
+    <p>$50</p>
+    <button onclick="addToCart('Sunset Bliss', 50)">Add to Cart</button>
+  </div>
+  <!-- Add more cards similarly -->
+</section>
+
+<script>
+  function addToCart(product, price) {
+    alert(product + " added to cart!");
+    // Optional: Use AJAX to call add_to_cart.php
+  }
+</script>
+
+</body>
+</html>
